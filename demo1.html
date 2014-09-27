@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Slide Demo</title>
+	<link type="text/css" href="asset/css/slider.css" rel="stylesheet" />
+	<script type="text/javascript" src="lib/modernizr.js"></script>
+	<script type="text/javascript" src="lib/sea.js"></script>
+	<script type="text/javascript" src="lib/sea-config.js"></script>
+</head>
+<body>
+	<div id="slideshow-01">
+		<ul class="slide-01">
+			<li style="z-index: 99;"><img src="asset/image/img_01_1920.jpg" /></li>
+			<li style="z-index: 98;"><img src="asset/image/img_02_1920.jpg" /></li>
+			<li style="z-index: 97;"><img src="asset/image/img_03_1920.jpg" /></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	seajs.use('slider', function(Slider) {
+
+		var optSlider1 = {
+			imgWrap: $('ul.slide-01'),
+			autoPlay: true
+		};
+
+		new Slider(optSlider1);
+	});
+</script>
